@@ -1,4 +1,4 @@
-<section class="property-bindinf">
+<section class="property-bindind text-center">
 
   <article>
     <h3>Interpolation</h3>
@@ -52,4 +52,29 @@
     </div>
   </article>
 
+<!--event binding -->
+
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button class="btn btn-primary" (click)="botaoClicado()">Click me!</button>
+      <br><br>
+
+      <input type="text" 
+      (keyup)="onKeyUp($event)" 
+      (keyup.enter)="salvarValor(campoInput.value)" 
+      (blur)="salvarValor(campoInput.value)"
+       #campoInput>
+      <p>Valor Atual: {{ valorAtual }}</p>
+      <p>Valor Salvo: {{ valorSalvo }}</p>
+      <br>
+      <span (mouseover)="onMouseOverOut()" 
+      (mouseout)="onMouseOverOut()"
+      [class.highlight]="isMouseOver">
+      Passe o mouse aqui
+      </span>
+    </div>
+  </article>
 </section>
+
+
