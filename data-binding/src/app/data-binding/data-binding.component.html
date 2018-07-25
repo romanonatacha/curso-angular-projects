@@ -76,32 +76,15 @@
     </div>
   </article>
 
-  <!--class and style binding -->
+  <app-meu-form></app-meu-form>
 
+</section>
+
+<section class="input-output-properties text-center">
   <article>
-    <h3>Two-way data binding</h3>
-
-    <div>
-      <input type="text"
-      [value]="nome"
-      (input)="nome = $event.target.value">
-
-
-      <input type="text"
-      [ngModel]="nome"
-      (ngModelChange)="nome = $event">
-
-      <input type="text"
-      [(ngModel)]="nome">
-
-      <p>Você digitou: {{ nome }}</p>
-    </div>
-
-    <div>
-      <input type="text" [(ngModel)]="pessoa.nome">
-      <input type="text" [(ngModel)]="pessoa.idade">
-      <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade</p>
-    </div>
+    <h3>Input and Output Properties
+      <app-curso [nome]="nomeDoCurso"></app-curso>
+    </h3>
   </article>
 </section>
 
