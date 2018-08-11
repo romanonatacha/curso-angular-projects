@@ -10,7 +10,7 @@ import { MaterializeModule } from "angular2-materialize";
   ],
   imports: [
     BrowserModule,
-    MaterializeModule,s
+    MaterializeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
