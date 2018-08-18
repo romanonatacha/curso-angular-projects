@@ -1,0 +1,16 @@
+<h1>
+  <i class="fas"
+  [class.fa-plus]="!meuFavorito" 
+  [class.fa-star]="meuFavorito" 
+  (click)="onClick()">   
+  </i>
+</h1>
+
+<br>
+
+<h1>
+    <i class="fas"
+    [ngClass]="{'fa-plus': !meuFavorito, 'fa-star': meuFavorito}"
+    (click)="onClick()">   
+    </i>
+  </h1>
