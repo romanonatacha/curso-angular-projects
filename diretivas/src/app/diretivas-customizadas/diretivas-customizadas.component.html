@@ -12,3 +12,20 @@
 <p highlight [defaultColor]="'grey'" [highlightColor]="'purple'"> 
     Texto de highlight com cores customizadas
  </p>
+
+ <br>
+
+ <h3>Diretiva estrutura customizada - ng else</h3>
+
+ <div *ngIf="mostrarCursos">
+    Lista de cursos 
+  </div>
+  
+  <div *ngElse="mostrarCursos">
+    Não existem cursos.
+  </div>
+  
+  <br>
+  
+  <button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
+  <br><br>
