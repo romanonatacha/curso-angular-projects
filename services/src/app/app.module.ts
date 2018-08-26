@@ -1,3 +1,4 @@
+import { LogService } from './shared/log.service';
 import { CursosService } from './cursos/cursos.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -15,7 +16,7 @@ import { CursosModule } from './cursos/cursos.module';
     CriarCursoModule,
     CursosModule
   ],
-  // providers: [CursosService],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
