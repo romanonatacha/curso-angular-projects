@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, interval } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-exemplo-pipes',
@@ -14,7 +16,34 @@ export class ExemploPipesComponent implements OnInit {
     preco: 17.90,
     dataLancamento: new Date(2017, 11, 10),
     url: 'https://www.amazon.com.br/Sutil-Arte-Ligar-Se/dp/855100249X/ref=zg_bs_books_1?_encoding=UTF8&psc=1&refRID=3QKBVZQ4RSEMP9GXPHSW'
+  };
+
+  livros: string[] = ['React', 'Angular'];
+
+  filtro: string;
+
+  addCurso(valor) {
+    this.livros.push(valor);
   }
+
+  obterCurso() {
+    if (this.livros.length === 0 || this.filtro === undefined || this.filtro.trim() === '') {
+      return this.livros;
+    }
+
+    return this.livros.filter((v) => {
+      if (v.toLocaleLowerCase().indexOf(this.filtro.toLowerCase()) >= 0) {
+        return true;
+      }
+      return false;
+    });
+  }
+
+  valorAsync = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('valow assíncrono'), 2000)
+  });
+
+  valorAsync2 = interval(2000).pipe(map(valor => 'Valor assíncrono 2'));
 
   constructor() { }
 
