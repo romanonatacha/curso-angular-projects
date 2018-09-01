@@ -14,6 +14,14 @@ export class ExemploPipesComponent implements OnInit {
     preco: 17.90,
     dataLancamento: new Date(2017, 11, 10),
     url: 'https://www.amazon.com.br/Sutil-Arte-Ligar-Se/dp/855100249X/ref=zg_bs_books_1?_encoding=UTF8&psc=1&refRID=3QKBVZQ4RSEMP9GXPHSW'
+  };
+
+  livros: string[] = ['React', 'Angular'];
+
+  filtro: string;
+
+  addCurso(valor) {
+    this.livros.push(valor);
   }
 
   constructor() { }
