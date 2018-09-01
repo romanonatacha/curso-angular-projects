@@ -1,0 +1,12 @@
+<h3>Exemplos de Pipes</h3>
+
+<p>Titulo: {{livro.titulo | uppercase | lowercase | camelCase}}</p>
+<p>Estrelas: {{livro.rating | number:'1.1-1'}}</p>
+<p>Páginas: {{livro.numeroPaginas | number}}</p>
+<p>Preço: {{livro.preco | currency:'BRL'}}</p>
+<p>Data de Lançamento: {{livro.dataLancamento | date}}</p>
+<p>Urk: {{livro.url}}</p>
+
+<br>
+
+<p>Livro: {{livro | json}}</p>
