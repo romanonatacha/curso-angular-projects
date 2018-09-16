@@ -8,8 +8,8 @@ import { LoginComponent } from './login/login.component';
 // import { CursosComponent } from './cursos/cursos.component';
 // import { routing } from './app.routing';
 import { AppRoutingModule } from './app.routng.module';
-import { CursosModule } from './cursos/cursos.module';
-import { AlunosModule } from './alunos/alunos.module';
+// import { CursosModule } from './cursos/cursos.module';
+// import { AlunosModule } from './alunos/alunos.module';
 // import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 // import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component'
 
@@ -24,9 +24,9 @@ import { AlunosModule } from './alunos/alunos.module';
   ],
   imports: [
     BrowserModule,
-    CursosModule,
+    // CursosModule,
     AppRoutingModule,
-    AlunosModule
+    // AlunosModule
     // routing
   ],
   // providers: [CursosService],

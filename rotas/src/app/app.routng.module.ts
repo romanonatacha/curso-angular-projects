@@ -10,11 +10,14 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-    { path: 'cursos', component: CursosComponent},
-    { path: 'curso/:id', component: CursoDetalheComponent},
+    { path: 'cursos', loadChildren: '../app/cursos/cursos.module#CursosModule'},
+    { path: 'alunos', loadChildren: '../app/alunos/alunos.module#AlunosModule'},
+
+    // { path: 'cursos', component: CursosComponent},
+    // { path: 'curso/:id', component: CursoDetalheComponent},
     { path: 'login', component: LoginComponent},
     { path: '', component: HomeComponent},
-    { path: 'naoEncontrado', component: CursoNaoEncontradoComponent}
+    // { path: 'naoEncontrado', component: CursoNaoEncontradoComponent}
 ];
 
 @NgModule ({
