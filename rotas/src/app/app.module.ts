@@ -1,3 +1,5 @@
+import { AuthGuard } from './guards/auth.guard';
+import { AuthService } from './login/auth.service';
 import { CursosService } from './cursos/cursos.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,8 +10,9 @@ import { LoginComponent } from './login/login.component';
 // import { CursosComponent } from './cursos/cursos.component';
 // import { routing } from './app.routing';
 import { AppRoutingModule } from './app.routng.module';
-import { CursosModule } from './cursos/cursos.module';
-import { AlunosModule } from './alunos/alunos.module';
+import { FormsModule } from '@angular/forms';
+// import { CursosModule } from './cursos/cursos.module';
+// import { AlunosModule } from './alunos/alunos.module';
 // import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 // import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component'
 
@@ -24,11 +27,13 @@ import { AlunosModule } from './alunos/alunos.module';
   ],
   imports: [
     BrowserModule,
-    CursosModule,
+    // CursosModule,
     AppRoutingModule,
-    AlunosModule
+    FormsModule
+    // AlunosModule
     // routing
   ],
+  providers: [AuthService, AuthGuard],
   // providers: [CursosService],
   bootstrap: [AppComponent]
 })
